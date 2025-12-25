@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>隐私政策 - 极简边框</title>
+  <meta name="description" content="极简边框 隐私政策" />
+  <style>
+    :root{
+      --bg: #f2f2f7;
+      --card: #ffffff;
+      --text: #111827;
+      --sub: #6b7280;
+      --line: rgba(17,24,39,.06);
+      --radius: 18px;
+      --shadow: 0 6px 20px rgba(17,24,39,.06);
+    }
+    *{ box-sizing: border-box; }
+    body{
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+                   "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC",
+                   "Microsoft YaHei", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header{
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(242,242,247,.85);
+      backdrop-filter: saturate(180%) blur(18px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav{
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      letter-spacing: .2px;
+    }
+    main{
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 22px 16px 40px;
+    }
+    h1{
+      margin: 6px 0 6px;
+      font-size: 36px;
+      line-height: 1.15;
+      letter-spacing: -.3px;
+    }
+    .meta{
+      margin: 0 0 18px;
+      color: var(--sub);
+      font-size: 14px;
+    }
+    .card{
+      background: var(--card);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      padding: 18px 18px;
+      margin: 14px 0;
+    }
+    .card h2{
+      margin: 0 0 10px;
+      font-size: 18px;
+      letter-spacing: .1px;
+    }
+    .card p{
+      margin: 0;
+      color: #374151;
+      font-size: 15px;
+    }
+    a{ color: #2563eb; text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+    footer{
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 0 16px 30px;
+      color: var(--sub);
+      font-size: 12px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav">隐私政策</div>
+  </header>
+
+  <main>
+    <h1>隐私政策</h1>
+    <p class="meta">最后更新：2025-12-24</p>
+
+    <section class="card">
+      <h2>概述</h2>
+      <p>
+        「极简边框」主要在你的设备本地进行图片处理。我们不需要你注册账号，
+        不收集你的个人信息，不上传你的照片或生成作品到任何服务器，
+        也不做广告追踪或用户行为分析。
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>我们会访问哪些权限</h2>
+      <p>
+        相册权限：用于让你从相册中选择照片进行处理，
+        以及在你主动保存作品时将结果写入相册。
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>我们会处理哪些信息</h2>
+      <p>
+        为生成边框上的信息展示，本应用可能在设备本地读取照片文件中的元数据
+        （例如机型、拍摄参数、拍摄时间等 EXIF 信息）。
+        如果照片包含 GPS 信息且你使用带地点显示的边框，
+        本应用可能会使用系统提供的地理编码服务将坐标转换为地点名称。
+        上述处理仅用于生成图片效果与文字展示，不会被我们上传或用于识别你的身份。
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>数据存储</h2>
+      <p>
+        收藏配置、昵称与头像等设置仅保存在你的设备本地（例如用于在“收藏/我的”页面展示）。
+        卸载应用会清除本地保存的数据。
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>分享与导出</h2>
+      <p>
+        当你选择“分享”时，会调用系统分享面板，将你选择的图片交由你指定的应用/服务处理。
+        本应用不会在后台自动上传任何内容。
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>联系我们</h2>
+      <p>
+        如对本隐私政策有任何疑问，请联系我们：邮箱：
+        <a href="mailto:syxing001@163.com">syxing001@163.com</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> 极简边框 · Privacy Policy
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
